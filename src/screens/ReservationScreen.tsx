@@ -107,7 +107,8 @@ const ReservationScreen = () : JSX.Element =>{
         onEndReached={() :JSX.Element=>{
             setEnd(true);
             return(<Text style={{marginBottom:30,color:'#aaa',fontSize:30}}>No More !</Text>)
-    }}
+         }}
+         
         onEndReachedThreshold={0}
 
         ListHeaderComponent={() : JSX.Element=>{

@@ -49,10 +49,7 @@ function App(): JSX.Element {
              backgroundColor={backgroundStyle.backgroundColor}
            />
          </SafeAreaView>
-         <View>
-
-
-         </View>
+         
          <>
 
          <BottomTabNav />

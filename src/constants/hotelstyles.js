@@ -191,18 +191,7 @@ iconTxt:{
     fontSize:9,
     fontWeight:'500',
 },
-btnStyle:{
-    paddingHorizontal:8,
-    paddingVertical:5,
-    borderRadius:5,
-    backgroundColor:'#FFF',
-    right:0,
-    start:"800%",
-    bottom:18,
-    borderColor: '#D81F1F',
-    borderWidth:1,
-    
-},
+
    
 iconTxtBtn:{
     
@@ -218,17 +207,47 @@ iconLeftBtn:{
     marginRight:4,
     tintColor:'#D81F1F',
 },
+
+headerF:{
+    
+    marginStart:5,
+    flexBasis:25,
+    marginBottom:2,
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignContent:'center',
+    
+  
+},
+
 headerBtn:{
+    
+    flex:6,
     marginTop:0,
     marginBottom:10,
     flexDirection:'row',
     justifyContent:'flex-start',
-    alignItems:'center'
+    alignItems:'center',
+   
 },
 btnTxtStyle:{
     fontSize:10,
     color:'#D81F1F',
-}
+    textAlign:'center',
+},
+btnStyle:{
+    flex:1,
+    paddingHorizontal:8,
+    paddingVertical:5,
+    borderRadius:5,
+    backgroundColor:'#FFF',
+    right:0,
+   // start:"800%",
+    bottom:18,
+    borderColor: '#D81F1F',
+    borderWidth:1,
+    
+},
 
 
 

@@ -40,13 +40,14 @@ const Hotel = ({id} : {id:number})=>{
                     <Text style={styles.iconTxt} >+966 11 481 0569</Text>
                 </View>
 
-                <View style={styles.header}>
+                <View style={styles.headerF}>
 
                 <View style={styles.headerBtn}>
                     <Image style={styles.iconLeftBtn} source={ImagePath.Calender} />
                     <Text style={styles.iconTxtBtn} >Fri,Agu 20 ,12 Am</Text>
                     </View>
                     <TouchableOpacity style={styles.btnStyle} ><Text style={styles.btnTxtStyle}>Re-Reserve</Text></TouchableOpacity>
+
                 </View>
                 
             </View>

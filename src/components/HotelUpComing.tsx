@@ -45,13 +45,15 @@ const HotelUpComing = ():JSX.Element=>{
                 <Text style={styles.iconTxt} >Reservation For 2 People</Text>
             </View>
           
-            <View style={styles.header}>
+            <View style={styles.headerF}>
 
-            <View style={styles.headerBtn}>
+                <View style={styles.headerBtn}>
                 <Image style={styles.iconLeftBtn} source={ImagePath.Calender} />
                 <Text style={styles.iconTxtBtn} >Fri,Agu 20 ,12 Am</Text>
                 </View>
+
                 <TouchableOpacity style={styles.btnStyle} ><Text style={styles.btnTxtStyle}>Cancel</Text></TouchableOpacity>
+
             </View>
 
             </View>
