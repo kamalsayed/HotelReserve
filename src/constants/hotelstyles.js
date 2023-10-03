@@ -153,16 +153,20 @@ headerFlex:{
    
 },
 header_right:{  
-    flex:7,
+    flex:4,
     marginLeft:10,
     flexDirection:'row',
     justifyContent:'flex-end',
     alignItems:'center',
     //left:'35%',
 },
+NameandLoc:{
+    flex:3,
+    flexDirection:'row',
+},
 
 name:{
-    flex:2,
+    flex:1,
     fontSize:20,
     color:'#553586',
     fontWeight:'bold',
@@ -172,11 +176,13 @@ location:{
     flex:1,
     fontSize:10,
     color:'#180732',
-    marginLeft:5,
+   // marginLeft:5,
     marginRight:5,
     marginTop:6,
-    right:8,
-    bottom:3
+    justifyContent:'flex-start',
+    alignSelf:'flex-start',
+    //right:35,
+    //bottom:3
 },
 
 

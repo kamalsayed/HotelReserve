@@ -18,13 +18,19 @@ import { useAppDispatch , useAppSelector } from "../redux/store";
 import ImagePath from "../constants/ImagePath";
 import HotelUpComing from "../components/HotelUpComing";
 import RenderLoader from "../components/RenderLoader";
+import { styles } from "../constants/reservationStyle";
 
 
 
 const ReservationScreen = () : JSX.Element =>{
+    //to control state of Hotels [] localy 
     const [hotels ,SetHotels] =useState(null);
+
     const globalHotels = useAppSelector((state)=>state.Hotel.hotels);
     const dispatch = useAppDispatch();
+
+    //To control scroll indecator appearence
+    
     const [end,setEnd] = useState(false);
 
     // 
@@ -35,24 +41,25 @@ const ReservationScreen = () : JSX.Element =>{
 
     //function handels api request to get json data
     const getPlaceHolder = async ()=>{
+
          await placeholder.get('/').then((response)=>{
+
             const data =response.data;
+
             SetHotels(JSON.parse(JSON.stringify(response.data)));
-            const Array : hotelstype = data.map((hotel : hotel)=>({id :hotel.id , userId : hotel.userId , title : hotel.title , body : hotel.body , reversed : false}));
             
-            dispatch(setGlobalHotels(Array));         
+            const Array : hotelstype = data.map((hotel : hotel)=>({id :hotel.id , userId : hotel.userId , title : hotel.title , body : hotel.body , reversed : false}));
+    
+            dispatch(setGlobalHotels(Array));  
+
         }).catch((err)=>{console.log(err)});
     }
 
-
-
-
+    //Api Call
 
     useEffect(()=>{
         getPlaceHolder();
     },[]);
-
-   
 
 
     //Nothing got from API screen
@@ -78,7 +85,7 @@ const ReservationScreen = () : JSX.Element =>{
         </View>
 
         <View style={{flex:6,flexDirection:'column',rowGap:100,justifyContent:'space-between'}}>
-        <View style={{flex:9}}>
+        <View style={{flex:8}}>
         <HotelUpComing />
         </View>
 
@@ -95,15 +102,10 @@ const ReservationScreen = () : JSX.Element =>{
         alwaysBounceVertical={true}
 
         keyExtractor={(item)=> item.id.toString()} 
+
         renderItem={({ item }) => <Hotel key={item.id} id={item.id} />}
-        ListFooterComponent={() : JSX.Element=>{
-            if(!end){
-               return(  <RenderLoader />);
-            }   else{
-                return(  <></>);
-            }                         
-            }
-            }
+
+        ListFooterComponent={!end ? <RenderLoader /> : <></>  }
         
         onEndReached={()=>{
             setEnd(true);
@@ -112,13 +114,7 @@ const ReservationScreen = () : JSX.Element =>{
          
         onEndReachedThreshold={0}
 
-        ListHeaderComponent={() : JSX.Element=>{
-            if(!end){
-               return(  <RenderLoader />);
-            }   else{
-                return(  <></>);
-            }                         
-            }}
+        ListHeaderComponent={!end ? <RenderLoader /> : <></>}
 
         onStartReached={()=>{setEnd(true);}}
         onStartReachedThreshold={0}
@@ -135,54 +131,6 @@ const ReservationScreen = () : JSX.Element =>{
     );
 
 }
-
-const styles = StyleSheet.create({
-    Heading:{
-        paddingVertical:25,
-        paddingHorizontal:20,
-        backgroundColor:"#FFF",
-        color:'#180732',
-        fontWeight:'bold',
-        fontSize:24,
-        marginBottom:2,
-        
-    },
-    MainCont:{
-        flex:1,
-        flexDirection:'column',
-        justifyContent:'space-between',
-        alignContent:'center',
-        backgroundColor:'rgb(252, 252, 252)',
-      
-       
-    },
-    Heading_2:{
-        flex:1,
-       // marginTop:70,
-        marginRight:0,
-        paddingVertical:20,
-        paddingHorizontal:20,
-        backgroundColor:"#FFF",
-        color:'#180732',
-        fontWeight:'bold',
-        
-       
-    },
-    FLCont:{
-       
-        flex:6,
-        marginTop:10,
-        overflow:"hidden" ,
-        borderTopEndRadius:25 ,
-        borderTopStartRadius:25, 
-        paddingBottom:25,
-        },
-    FL:{
-       
-       
-    }
-    
-});
 
 
 
