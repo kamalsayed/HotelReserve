@@ -101,25 +101,45 @@ header_right:{
     alignItems:'center',
     left:'35%',
 },
+HotCont:{
+    flex:1,
+    flexDirection:'column',
+    minHeight:'15%',
+    maxHeight:250,
+    backgroundColor:"#FFF",
+    marginHorizontal:5,
+    borderBottomLeftRadius:10,
+    borderBottomRightRadius:10,
+},
 
-
+topH:{
+    
+    flexDirection:'column',
+    overflow:'hidden',
+    zIndex:1000,
+    backgroundColor:'#FFF',
+    marginBottom:-12,
+  
+},
 
 
 container:{
-    paddingTop:10,
+    
     backgroundColor:'rgb(255,255,255)',
     borderRadius:5,
     paddingHorizontal:10,
     overflow:'hidden',
     maxHeight:'auto',
     minHeight:120,
-    marginTop:-20,
-    marginBottom:10,
+    
+    borderBottomRightRadius:15,
+    borderBottomLeftRadius:15,
+    
 },
 header:{
     marginStart:5,
-   
-    marginBottom:10,
+    flexBasis:25,
+    marginBottom:2,
     flexDirection:'row',
     justifyContent:'flex-start',
   
@@ -130,7 +150,9 @@ headerFlex:{
     marginTop:1,
     marginBottom:0,
     flexDirection:'row',
-    justifyContent:'flex-start',
+    justifyContent:'flex-start',    
+    
+    alignItems:'center',
    
 },
 name:{
@@ -147,12 +169,22 @@ location:{
     marginTop:6,
 },
 iconLeft:{
-    width:10,
-    height:10,
+    width:9,
+    height:11,
     resizeMode:'contain',
     marginRight:4,
-    marginTop:1,
+},iconLeftP:{
+    width:13,
+    height:13,
+    resizeMode:'contain',
+    marginRight:4,
+},iconLeftC:{
+    width:17,
+    height:17,
+    resizeMode:'contain',
+    marginRight:4,
 },
+
 iconTxt:{
     color:'#180732',
     textTransform:'capitalize',
@@ -180,15 +212,15 @@ iconTxtBtn:{
     color :'#D81F1F',
 },
 iconLeftBtn:{
-    width:10,
-    height:10,
+    width:14,
+    height:14,
     resizeMode:'contain',
     marginRight:4,
     tintColor:'#D81F1F',
 },
 headerBtn:{
     marginTop:0,
-    marginBottom:0,
+    marginBottom:10,
     flexDirection:'row',
     justifyContent:'flex-start',
     alignItems:'center'

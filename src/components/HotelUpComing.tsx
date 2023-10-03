@@ -10,7 +10,8 @@ const HotelUpComing = ():JSX.Element=>{
 
     return(
         <>
-        <View style={{overflow:'hidden',zIndex:1000,backgroundColor:'#FFF',marginBottom:20,}}>
+        <View style={styles.HotCont}>
+        <View style={styles.topH}>
                 <Text style={styles.Heading_2}>Upcoming</Text>
                 <Image style={styles.H2Img} source={ImagePath.Resturant} />
                 <View onTouchStart={()=>{SetLove(!love)}}  style={love ?styles.HeartSpanLove :styles.HeartSpan}>
@@ -34,13 +35,13 @@ const HotelUpComing = ():JSX.Element=>{
             </View>
 
             <View style={styles.header}>
-                <Image style={styles.iconLeft} source={ImagePath.Phone} />
+                <Image style={styles.iconLeftC} source={ImagePath.Phone} />
                 <Text style={styles.iconTxt} >+966 11 481 0569</Text>
             </View>
 
             
             <View style={styles.header}>
-                <Image style={styles.iconLeft} source={ImagePath.SmallProfile} />
+                <Image style={styles.iconLeftP} source={ImagePath.SmallProfile} />
                 <Text style={styles.iconTxt} >Reservation For 2 People</Text>
             </View>
           
@@ -53,6 +54,7 @@ const HotelUpComing = ():JSX.Element=>{
                 <TouchableOpacity style={styles.btnStyle} ><Text style={styles.btnTxtStyle}>Cancel</Text></TouchableOpacity>
             </View>
 
+            </View>
             </View>
 </>
     )

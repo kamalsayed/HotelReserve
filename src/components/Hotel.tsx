@@ -32,11 +32,11 @@ const Hotel = ({id} : {id:number})=>{
                     <Text style={styles.iconTxt} >{body ? body.title: 'Default'}</Text>
                 </View>
                 <View style={styles.header}>
-                    <Image style={styles.iconLeft} source={ImagePath.SmallProfile} />
+                    <Image style={styles.iconLeftP} source={ImagePath.SmallProfile} />
                     <Text style={styles.iconTxt} >{body ? body.body: 'Default'}</Text>
                 </View>
                 <View style={styles.header}>
-                    <Image style={styles.iconLeft} source={ImagePath.Phone} />
+                    <Image style={styles.iconLeftC} source={ImagePath.Phone} />
                     <Text style={styles.iconTxt} >+966 11 481 0569</Text>
                 </View>
 

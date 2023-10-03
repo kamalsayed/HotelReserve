@@ -60,7 +60,8 @@ const ReservationScreen = () : JSX.Element =>{
         
         return(
             <View>
-                <Text style={{fontSize:34,color:'rgb(13,13,13)'}}>No Data To Display</Text>
+                <Text style={{fontSize:24,color:'rgb(13,13,13)'}}>Loading . . .</Text>
+                <RenderLoader />
             </View>
         )
     }
@@ -70,15 +71,22 @@ const ReservationScreen = () : JSX.Element =>{
 
     return (
         
-        <View style={{backgroundColor:'rgb(250, 250, 250)',flex:1}}>
-            <View>
-                <Text style={styles.Heading}>Your Reservation</Text>
-            </View>
+        <View style={styles.MainCont}>
 
-               <HotelUpComing />
-                    <Text style={styles.Heading_2}>Previous</Text>
-                 
-        <View style={{height:'40%',paddingBottom:22 ,overflow:"hidden", }}>    
+        <View style={{flex:1.5, }}>
+          <Text style={styles.Heading}>Your Reservation</Text>
+        </View>
+
+        <View style={{flex:6,flexDirection:'column',alignItems:'stretch',alignContent:'center',rowGap:60,flexGrow:6}}>
+        <HotelUpComing />
+        
+
+        
+        <Text style={styles.Heading_2}>Previous</Text>
+        </View>
+
+        <View style={styles.FLCont}>  
+
         <FlatList
         pagingEnabled={false}
         style={styles.FL}
@@ -119,8 +127,9 @@ const ReservationScreen = () : JSX.Element =>{
         </View>     
                 
                  
-                
-        </View>
+     
+        </View>  
+
     );
 
 }
@@ -136,20 +145,40 @@ const styles = StyleSheet.create({
         marginBottom:2,
         
     },
+    MainCont:{
+        flex:1,
+        flexDirection:'column',
+        justifyContent:'space-between',
+        alignContent:'center',
+        backgroundColor:'rgb(250, 250, 250)',
+      
+       
+    },
     Heading_2:{
+        
         marginRight:0,
         paddingVertical:20,
         paddingHorizontal:20,
         backgroundColor:"#FFF",
         color:'#180732',
         fontWeight:'bold',
-        marginBottom:10,
+        
+       
     },
+    FLCont:{
+       
+        flex:6,
+        marginTop:10,
+       
+        overflow:"hidden" ,
+        borderTopEndRadius:25 ,
+        borderTopStartRadius:25 
+        },
     FL:{
-        marginBottom:35,
-        paddingBottom:30,
+      
        
     }
+    
 });
 
 

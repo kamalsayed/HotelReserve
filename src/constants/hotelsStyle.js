@@ -34,8 +34,18 @@ location:{
     fontFamily:'sans-serif-medium',
 },
 iconLeft:{
-    width:8,
-    height:8,
+    width:9,
+    height:11,
+    resizeMode:'contain',
+    marginRight:4,
+},iconLeftP:{
+    width:13,
+    height:13,
+    resizeMode:'contain',
+    marginRight:4,
+},iconLeftC:{
+    width:17,
+    height:17,
     resizeMode:'contain',
     marginRight:4,
 },
@@ -66,8 +76,8 @@ iconTxtBtn:{
     color :'#D81F1F',
 },
 iconLeftBtn:{
-    width:10,
-    height:10,
+    width:14,
+    height:14,
     resizeMode:'contain',
     marginRight:4,
     tintColor:'#D81F1F',
