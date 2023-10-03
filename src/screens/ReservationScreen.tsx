@@ -60,7 +60,7 @@ const ReservationScreen = () : JSX.Element =>{
         
         return(
             <View>
-                <Text style={{fontSize:24,color:'rgb(13,13,13)'}}>Loading . . .</Text>
+                <Text style={{top:40,fontSize:24,color:'rgb(13,13,13)',marginLeft:20}}>Loading . . .</Text>
                 <RenderLoader />
             </View>
         )
@@ -77,9 +77,10 @@ const ReservationScreen = () : JSX.Element =>{
           <Text style={styles.Heading}>Your Reservation</Text>
         </View>
 
-        <View style={{flex:6,flexDirection:'column',alignItems:'stretch',alignContent:'center',rowGap:60,flexGrow:6}}>
+        <View style={{flex:6,flexDirection:'column',rowGap:100,justifyContent:'space-between'}}>
+        <View style={{flex:9}}>
         <HotelUpComing />
-        
+        </View>
 
         
         <Text style={styles.Heading_2}>Previous</Text>
@@ -104,9 +105,9 @@ const ReservationScreen = () : JSX.Element =>{
             }
             }
         
-        onEndReached={() :JSX.Element=>{
+        onEndReached={()=>{
             setEnd(true);
-            return(<Text style={{marginBottom:30,color:'#aaa',fontSize:30}}>No More !</Text>)
+           
          }}
          
         onEndReachedThreshold={0}
@@ -151,12 +152,13 @@ const styles = StyleSheet.create({
         flexDirection:'column',
         justifyContent:'space-between',
         alignContent:'center',
-        backgroundColor:'rgb(250, 250, 250)',
+        backgroundColor:'rgb(252, 252, 252)',
       
        
     },
     Heading_2:{
-        
+        flex:1,
+       // marginTop:70,
         marginRight:0,
         paddingVertical:20,
         paddingHorizontal:20,
@@ -170,13 +172,13 @@ const styles = StyleSheet.create({
        
         flex:6,
         marginTop:10,
-       
         overflow:"hidden" ,
         borderTopEndRadius:25 ,
-        borderTopStartRadius:25 
+        borderTopStartRadius:25, 
+        paddingBottom:25,
         },
     FL:{
-      
+       
        
     }
     

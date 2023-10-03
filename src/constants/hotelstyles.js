@@ -81,6 +81,7 @@ export const styles = StyleSheet.create({
         
     },
     Distance:{
+        alignSelf:'flex-end',
         paddingHorizontal:6,
         paddingVertical:1,
         fontSize:10,
@@ -88,19 +89,14 @@ export const styles = StyleSheet.create({
         fontWeight:'bold',
         backgroundColor:'#FFF',
         bottom:25,
+        right:15,
         width:45,
-        marginLeft:"85%",
+        
         borderRadius:20,
+        zIndex:10,
     }
 ,
-header_right:{  
-    
-    marginLeft:10,
-    flexDirection:'row',
-    justifyContent:'flex-end',
-    alignItems:'center',
-    left:'35%',
-},
+
 HotCont:{
     flex:1,
     flexDirection:'column',
@@ -150,24 +146,42 @@ headerFlex:{
     marginTop:1,
     marginBottom:0,
     flexDirection:'row',
-    justifyContent:'flex-start',    
-    
+    justifyContent:'center',    
+    alignContent:'center',
     alignItems:'center',
+    flexBasis:4
    
 },
+header_right:{  
+    flex:7,
+    marginLeft:10,
+    flexDirection:'row',
+    justifyContent:'flex-end',
+    alignItems:'center',
+    //left:'35%',
+},
+
 name:{
+    flex:2,
     fontSize:20,
     color:'#553586',
     fontWeight:'bold',
     fontFamily:'arial'
 },
 location:{
+    flex:1,
     fontSize:10,
     color:'#180732',
     marginLeft:5,
     marginRight:5,
     marginTop:6,
+    right:8,
+    bottom:3
 },
+
+
+
+
 iconLeft:{
     width:9,
     height:11,

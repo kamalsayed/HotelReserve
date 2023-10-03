@@ -25,13 +25,13 @@ const HotelUpComing = ():JSX.Element=>{
             <View style={styles.headerFlex} >
                 
                 <Text style={styles.name}>Meraki</Text>
-
                 <Text style={styles.location}>Greek</Text>
 
                 <View style={styles.header_right}>
                 <Image style={styles.iconLeft} source={ImagePath.Location} />
                 <Text style={styles.iconTxt} >Mode Al Faisaliah - Riyadh</Text>
                 </View>
+
             </View>
 
             <View style={styles.header}>
