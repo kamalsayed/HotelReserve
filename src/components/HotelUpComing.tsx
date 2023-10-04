@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-import { Text,View,Image,Button,StyleSheet ,TouchableOpacity } from "react-native";
+import { Text,View,Image,TouchableOpacity } from "react-native";
 
 import ImagePath from "../constants/ImagePath";
-import { styles } from "../constants/hotelstyles";
+import { styles } from "../constants/styles/hotelstyles";
 
 const HotelUpComing = ():JSX.Element=>{
+    //to control love icon state active or not
     const [love ,SetLove] = useState(false);
 
     return(
@@ -57,8 +58,8 @@ const HotelUpComing = ():JSX.Element=>{
             </View>
 
             </View>
-            </View>
-</>
+        </View>
+        </>
     )
 
 

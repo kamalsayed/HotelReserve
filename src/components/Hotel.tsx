@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-import { Text,View,Image,Button,StyleSheet ,TouchableOpacity } from "react-native";
+import { Text,View,Image ,TouchableOpacity } from "react-native";
 
 import ImagePath from "../constants/ImagePath";
 
-import { useAppDispatch , useAppSelector } from "../redux/store";
+import { useAppSelector } from "../redux/store";
 
-import  { setGlobalHotels} from '../redux/HotelsSlice';
-import { styles } from "../constants/hotelsStyle";
+
+import { styles } from "../constants/styles/hotelsStyle";
 
 const Hotel = ({id} : {id:number})=>{
     const globalHotels = useAppSelector((state)=>state.Hotel.hotels);
-    const dispatch = useAppDispatch();
+  
     const getItemById = (id:number)=>{
          return globalHotels.filter((hotel)=>hotel.id === id)[0];
     }    

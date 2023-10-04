@@ -18,7 +18,7 @@ import { useAppDispatch , useAppSelector } from "../redux/store";
 import ImagePath from "../constants/ImagePath";
 import HotelUpComing from "../components/HotelUpComing";
 import RenderLoader from "../components/RenderLoader";
-import { styles } from "../constants/reservationStyle";
+import { styles } from "../constants/styles/reservationStyle";
 
 
 

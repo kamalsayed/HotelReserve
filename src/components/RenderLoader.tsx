@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import {
     StyleSheet,
-    Text,
     View,
-    ScrollView,
-    Image,
-    FlatList,
     ActivityIndicator
   } from 'react-native';
 

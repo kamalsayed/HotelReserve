@@ -5,7 +5,7 @@ import FavouriteScreen from '../screens/FavouriteScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import {Image } from 'react-native';
 import ImagePath from '../constants/ImagePath';
-import { styles } from '../constants/BottomTabStyle';
+import { styles } from '../constants/styles/BottomTabStyle';
 
 
 

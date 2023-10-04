@@ -2,11 +2,10 @@ import React from "react";
 
 import {
     Image,
-    StyleSheet,
     Text,
     View,
   } from 'react-native';
-import { styles } from "../constants/styles";
+import { styles } from "../constants/styles/styles";
 import ImagePath from "../constants/ImagePath";
 
 
