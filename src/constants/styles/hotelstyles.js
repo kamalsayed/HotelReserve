@@ -59,8 +59,8 @@ export const styles = StyleSheet.create({
         marginRight:4,
         zIndex:10,
         borderRadius:20,
-        bottom:75,
-        right:20,
+        bottom:65,
+        right:'5%',
         
     },
     //#553586 #180732 #D81F1F
@@ -76,24 +76,24 @@ export const styles = StyleSheet.create({
         marginRight:4,
         zIndex:10,
         borderRadius:20,
-        bottom:75,
-        right:20,
+        bottom:65,
+        right:'5%',
         
     },
     Distance:{
         alignSelf:'flex-end',
-        paddingHorizontal:6,
+        paddingHorizontal:4,
         paddingVertical:1,
         fontSize:10,
         color:'#180732',
         fontWeight:'bold',
         backgroundColor:'#FFF',
-        bottom:25,
-        right:15,
+        bottom:15,
+        right:'4%',
         width:45,
-        
+       position:'absolute',
         borderRadius:20,
-        zIndex:10,
+        zIndex:50,
     }
 ,
 
@@ -127,7 +127,7 @@ container:{
     overflow:'hidden',
     maxHeight:'auto',
     minHeight:120,
-    
+    marginTop:20,
     borderBottomRightRadius:15,
     borderBottomLeftRadius:15,
     

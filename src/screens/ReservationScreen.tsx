@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { RootState } from '../redux/store';
+
 import {
     StyleSheet,
     Text,
@@ -11,14 +11,19 @@ import {
 
 import placeholder from '../api/placeholder';
 
-import {useSelector , useDispatch} from 'react-redux';
+
 import  { setGlobalHotels} from '../redux/HotelsSlice';
+
 import Hotel from "../components/Hotel";
+
 import { useAppDispatch , useAppSelector } from "../redux/store";
-import ImagePath from "../constants/ImagePath";
+
 import HotelUpComing from "../components/HotelUpComing";
+
 import RenderLoader from "../components/RenderLoader";
+
 import { styles } from "../constants/styles/reservationStyle";
+import { hotel, hotelstype } from "../constants/types";
 
 
 
@@ -27,6 +32,7 @@ const ReservationScreen = () : JSX.Element =>{
     const [hotels ,SetHotels] =useState(null);
 
     const globalHotels = useAppSelector((state)=>state.Hotel.hotels);
+
     const dispatch = useAppDispatch();
 
     //To control scroll indecator appearence
@@ -36,8 +42,7 @@ const ReservationScreen = () : JSX.Element =>{
     // 
     // data shape to assign hotels store.
     //
-    type hotelstype ={id:number ,userId:number , title:string ,body: string , reversed:boolean}[]
-    type hotel ={id:number ,userId:number , title:string ,body: string , reversed:boolean}
+
 
     //function handels api request to get json data
     const getPlaceHolder = async ()=>{
@@ -79,12 +84,14 @@ const ReservationScreen = () : JSX.Element =>{
     return (
         
         <View style={styles.MainCont}>
-
-        <View style={{flex:1.5, }}>
+            <View style={{flex:6}} >
+        <ScrollView >
+        <View style={{flex:1.5}}>
           <Text style={styles.Heading}>Your Reservation</Text>
         </View>
 
         <View style={{flex:6,flexDirection:'column',rowGap:100,justifyContent:'space-between'}}>
+            
         <View style={{flex:8}}>
         <HotelUpComing />
         </View>
@@ -92,10 +99,10 @@ const ReservationScreen = () : JSX.Element =>{
         
         <Text style={styles.Heading_2}>Previous</Text>
         </View>
-
+        </ScrollView>
+        </View>
         <View style={styles.FLCont}>  
-
-        <FlatList
+        <FlatList   
         pagingEnabled={false}
         style={styles.FL}
         data={globalHotels}

@@ -1,5 +1,6 @@
-import {createSlice ,PayloadAction } from '@reduxjs/toolkit';
+import {createSlice ,PayloadAction  } from '@reduxjs/toolkit';
 import Hotel from '../components/Hotel';
+import { hotelstype } from '../constants/types';
 
 export interface Hotel {
     userId:number,
@@ -17,7 +18,7 @@ const initialState : HotelState ={
     hotels : [],
 }
 
-type hotelstype= {id:number ,userId:number , title:string ,body: string , reversed:boolean}[]
+
 
 
 export const HotelsSlice =createSlice({
@@ -28,7 +29,8 @@ export const HotelsSlice =createSlice({
         setGlobalHotels :(state,action : PayloadAction<hotelstype>)=>{
            state.hotels= [...action.payload];
         }
-    }
+    },
+    
 
 
 });

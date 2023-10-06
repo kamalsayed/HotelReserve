@@ -12,7 +12,8 @@ const HotelUpComing = ():JSX.Element=>{
     return(
         <>
         <View style={styles.HotCont}>
-        <View style={styles.topH}>
+
+            <View style={styles.topH}>
                 <Text style={styles.Heading_2}>Upcoming</Text>
                 <Image style={styles.H2Img} source={ImagePath.Resturant} />
                 <View onTouchStart={()=>{SetLove(!love)}}  style={love ?styles.HeartSpanLove :styles.HeartSpan}>
